@@ -1,0 +1,27 @@
+services:
+  exchange:
+    container_name: ksox-exchange
+    hostname: exchange
+    build:
+      context: ./
+      dockerfile: ./exchange.dockerfile
+    ports:
+      - 3000:80
+  
+  landing:
+    container_name: ksox-landing
+    hostname: landing
+    build:
+      context: ./
+      dockerfile: ./landing.dockerfile
+    ports:
+      - 3001:80
+  
+  pay:
+    container_name: ksox-pay
+    hostname: pay
+    build:
+      context: ./
+      dockerfile: ./pay.dockerfile
+    ports:
+      - 3002:80
