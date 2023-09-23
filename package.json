@@ -8,7 +8,8 @@
     "components",
     "exchange",
     "landing",
-    "pay"
+    "pay",
+    "static"
   ],
   "scripts": {
     "fmt": "prettier --check .",
