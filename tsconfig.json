@@ -14,5 +14,4 @@
     "outDir": "tmp",
     "noEmit": true
   },
-  "files": ["./.eslintrc.cjs"]
 }
