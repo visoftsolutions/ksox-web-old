@@ -32,7 +32,5 @@ services:
     build:
       context: ./
       dockerfile: ./static.dockerfile
-    volumes:
-      - ./static/public:/public:ro
     ports:
       - 3003:80
