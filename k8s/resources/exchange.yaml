@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: exchange
+  labels:
+    app: exchange
+spec:
+  selector:
+    matchLabels:
+      app: exchange
+  template:
+    metadata:
+      labels:
+        app: exchange
+    spec:
+      containers:
+        - name: exchange
+          image: ksox-web-exchange
+          envFrom:
+            - secretRef:
+                name: exchange-secrets
+            - configMapRef:
+                name: exchange-config
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              memory: 100Mi
+              cpu: 100m
+            limits:
+              memory: 1000Mi
+              cpu: 1000m
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: exchange
+spec:
+  selector:
+    app: exchange
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80

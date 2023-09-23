@@ -1,0 +1,36 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: ksox-web
+
+resources:
+  - ./../../resources
+  - ./certificates.yaml
+  - ./issuer.yaml
+  - ./exchange.yaml
+  - ./landing.yaml
+  - ./pay.yaml
+  - ./static.yaml
+
+secretGenerator:
+  - name: exchange-secrets
+    env: ./envs/exchange-secrets.env
+  - name: landing-secrets
+    env: ./envs/landing-secrets.env
+  - name: pay-secrets
+    env: ./envs/pay-secrets.env
+  - name: static-secrets
+    env: ./envs/static-secrets.env
+
+configMapGenerator:
+  - name: exchange-config
+    env: ./envs/exchange-config.env
+  - name: landing-config
+    env: ./envs/landing-config.env
+  - name: pay-config
+    env: ./envs/pay-config.env
+  - name: static-config
+    env: ./envs/static-config.env
+
+generatorOptions:
+  disableNameSuffixHash: true
