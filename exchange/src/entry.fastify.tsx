@@ -13,6 +13,7 @@ import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import FastifyQwik from "./plugins/fastify-qwik";
 import trapsPluginCallback from "@dnlup/fastify-traps";
+import fastifySecureSession from "@fastify/secure-session";
 
 declare global {
   interface QwikCityPlatform extends PlatformNode {}
@@ -34,6 +35,8 @@ const start = async () => {
   });
 
   await fastify.register(trapsPluginCallback);
+
+  await fastify.register(fastifySecureSession);
 
   // Enable compression
   // https://github.com/fastify/fastify-compress
