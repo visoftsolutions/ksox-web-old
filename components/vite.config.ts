@@ -14,11 +14,14 @@ export default defineConfig(() => {
       lib: {
         entry: "./src/index.ts",
         formats: ["es", "cjs"],
-        fileName: (format) => `index.qwik.${format === "es" ? "mjs" : "cjs"}`,
+        fileName: (format) => `components.${format === "es" ? "mjs" : "cjs"}`,
       },
       rollupOptions: {
         // externalize deps that shouldn't be bundled into the library
         external: [/^node:.*/, ...excludeAll(dependencies), ...excludeAll(peerDependencies)],
+        output: {
+          assetFileNames: "components.[ext]",
+        },
       },
     },
     plugins: [qwikVite(), tsconfigPaths()],

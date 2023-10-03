@@ -2,16 +2,9 @@
   "name": "components",
   "version": "0.0.1",
   "description": "Create a reusable Qwik component library",
-  "main": "./lib/index.qwik.mjs",
-  "qwik": "./lib/index.qwik.mjs",
-  "types": "./lib-types/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./lib/index.qwik.mjs",
-      "require": "./lib/index.qwik.cjs",
-      "types": "./lib-types/index.d.ts"
-    }
-  },
+  "main": "./lib/components.mjs",
+  "qwik": "./lib/components.mjs",
+  "types": "./lib-types/src/index.d.ts",
   "files": [
     "lib",
     "lib-types"
@@ -33,6 +26,7 @@
     "release": "np",
     "start": "vite --open --mode ssr",
     "test": "echo \"No test specified\" && exit 0",
+    "prepare": "qwik build",
     "qwik": "qwik"
   },
   "devDependencies": {
@@ -41,10 +35,14 @@
     "@types/node": "^20.6.3",
     "@typescript-eslint/eslint-plugin": "6.7.2",
     "@typescript-eslint/parser": "6.7.2",
+    "autoprefixer": "^10.4.14",
+    "cssnano": "^6.0.1",
     "eslint": "8.50.0",
     "eslint-plugin-qwik": "latest",
     "np": "8.0.4",
+    "postcss": "^8.4.27",
     "prettier": "3.0.3",
+    "tailwindcss": "3.3.3",
     "typescript": "5.2.2",
     "undici": "5.25.2",
     "vite": "4.4.9",
