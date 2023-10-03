@@ -25,3 +25,12 @@ services:
       dockerfile: ./pay.dockerfile
     ports:
       - 3002:80
+
+  static:
+    container_name: ksox-static
+    hostname: static
+    build:
+      context: ./
+      dockerfile: ./static.dockerfile
+    ports:
+      - 3003:80

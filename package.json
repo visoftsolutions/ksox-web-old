@@ -5,9 +5,11 @@
   "author": "The KSOX Team",
   "license": "CC BY-NC-SA 4.0",
   "workspaces": [
+    "components",
     "exchange",
     "landing",
-    "pay"
+    "pay",
+    "static"
   ],
   "scripts": {
     "fmt": "prettier --check .",
@@ -17,11 +19,11 @@
     "update.apply": "npx npm-check-updates -u -ws --root"
   },
   "devDependencies": {
-    "@types/eslint": "^8.44.2",
+    "@types/eslint": "^8.44.3",
     "@types/node": "^20.6.3",
     "@typescript-eslint/eslint-plugin": "^6.7.2",
     "@typescript-eslint/parser": "^6.7.2",
-    "eslint": "^8.49.0",
+    "eslint": "^8.50.0",
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-qwik": "^1.2.12",
     "prettier": "^3.0.3",

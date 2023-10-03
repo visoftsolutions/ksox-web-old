@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: static
+  labels:
+    app: static
+spec:
+  selector:
+    matchLabels:
+      app: static
+  template:
+    metadata:
+      labels:
+        app: static
+    spec:
+      containers:
+        - name: static
+          image: ksox-web-static
+          envFrom:
+            - secretRef:
+                name: static-secrets
+            - configMapRef:
+                name: static-config
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              memory: 100Mi
+              cpu: 100m
+            limits:
+              memory: 1000Mi
+              cpu: 1000m
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: static
+spec:
+  selector:
+    app: static
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80

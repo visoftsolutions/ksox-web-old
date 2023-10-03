@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pay
+  labels:
+    app: pay
+spec:
+  selector:
+    matchLabels:
+      app: pay
+  template:
+    metadata:
+      labels:
+        app: pay
+    spec:
+      containers:
+        - name: pay
+          image: ksox-web-pay
+          envFrom:
+            - secretRef:
+                name: pay-secrets
+            - configMapRef:
+                name: pay-config
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              memory: 100Mi
+              cpu: 100m
+            limits:
+              memory: 1000Mi
+              cpu: 1000m
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pay
+spec:
+  selector:
+    app: pay
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
