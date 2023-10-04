@@ -14,11 +14,7 @@ export default defineConfig(() => {
       lib: {
         entry: "./src/index.ts",
         formats: ["es", "cjs"],
-<<<<<<< HEAD
         fileName: (format) => `components.qwik.${format === "es" ? "mjs" : "cjs"}`,
-=======
-        fileName: (format) => `components.${format === "es" ? "mjs" : "cjs"}`,
->>>>>>> main
       },
       rollupOptions: {
         // externalize deps that shouldn't be bundled into the library
