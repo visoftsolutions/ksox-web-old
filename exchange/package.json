@@ -45,7 +45,11 @@
     "eslint-plugin-qwik": "^1.2.12",
     "fastify": "^4.23.2",
     "fastify-plugin": "^4.5.1",
+<<<<<<< HEAD
     "postcss": "^8.4.31",
+=======
+    "postcss": "8.4.27",
+>>>>>>> main
     "prettier": "3.0.3",
     "styled-vanilla-extract": "^0.5.4",
     "tailwindcss": "3.3.3",

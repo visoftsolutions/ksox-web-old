@@ -2,8 +2,13 @@
   "name": "components",
   "version": "0.0.1",
   "description": "Create a reusable Qwik component library",
+<<<<<<< HEAD
   "main": "./lib/components.qwik.mjs",
   "qwik": "./lib/components.qwik.mjs",
+=======
+  "main": "./lib/components.mjs",
+  "qwik": "./lib/components.mjs",
+>>>>>>> main
   "types": "./lib-types/src/index.d.ts",
   "files": [
     "lib",
