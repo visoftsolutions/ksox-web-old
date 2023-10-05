@@ -1,5 +1,6 @@
 {
   "name": "pay",
+  "version": "0.0.1",
   "description": "Demo App with Routing built-in (recommended)",
   "engines": {
     "node": ">=15.0.0"
@@ -25,6 +26,7 @@
     "start": "vite --open --mode ssr",
     "update": "npx npm-check-updates",
     "update.apply": "npx npm-check-updates -u",
+    "clean": "rm -rf node_modules dist server",
     "qwik": "qwik"
   },
   "devDependencies": {

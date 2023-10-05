@@ -27,7 +27,8 @@
     "start": "vite --open --mode ssr",
     "test": "echo \"No test specified\" && exit 0",
     "prepare": "qwik build",
-    "qwik": "qwik"
+    "qwik": "qwik",
+    "clean": "rm -rf node_modules lib lib-types"
   },
   "devDependencies": {
     "@builder.io/qwik": "1.2.12",

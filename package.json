@@ -16,7 +16,8 @@
     "fmt.apply": "prettier --write .",
     "lint": "eslint \"**/*.{js,jsx,ts,tsx}\"",
     "update": "npx npm-check-updates -ws --root",
-    "update.apply": "npx npm-check-updates -u -ws --root"
+    "update.apply": "npx npm-check-updates -u -ws --root",
+    "clean": "rm -rf node_modules tmp package-lock.json && npm run clean -ws"
   },
   "devDependencies": {
     "@types/eslint": "^8.44.3",
