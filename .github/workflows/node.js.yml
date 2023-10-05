@@ -27,3 +27,4 @@ jobs:
       - run: npm install
       - run: npm run fmt
       - run: npm run lint
+      - run: npm run build -ws
