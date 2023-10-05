@@ -60,4 +60,4 @@ npm run update
 
 ## 🤝 Contributing
 
-Your contributions breathe life into this project! Before diving in, kindly ensure compliance with our code guidelines and licensing terms. Encountered a hurdle or have a suggestion? Raise an issue or connect with our dedicated team. Your journey with KSOX-WEB is valued!
+Encountered a hurdle or have a suggestion? Raise an issue or connect with our dedicated team. Your journey with KSOX-WEB is valued!
