@@ -27,25 +27,26 @@
     "start": "vite --open --mode ssr",
     "test": "echo \"No test specified\" && exit 0",
     "prepare": "qwik build",
-    "qwik": "qwik"
+    "qwik": "qwik",
+    "clean": "rm -rf node_modules lib lib-types"
   },
   "devDependencies": {
     "@builder.io/qwik": "1.2.12",
     "@types/eslint": "8.44.3",
-    "@types/node": "^20.6.3",
-    "@typescript-eslint/eslint-plugin": "6.7.2",
-    "@typescript-eslint/parser": "6.7.2",
-    "autoprefixer": "^10.4.14",
+    "@types/node": "^20.8.2",
+    "@typescript-eslint/eslint-plugin": "6.7.4",
+    "@typescript-eslint/parser": "6.7.4",
+    "autoprefixer": "^10.4.16",
     "cssnano": "^6.0.1",
     "eslint": "8.50.0",
     "eslint-plugin-qwik": "latest",
     "np": "8.0.4",
-    "postcss": "^8.4.27",
+    "postcss": "^8.4.31",
     "prettier": "3.0.3",
     "tailwindcss": "3.3.3",
     "typescript": "5.2.2",
-    "undici": "5.25.2",
-    "vite": "4.4.9",
+    "undici": "5.25.4",
+    "vite": "4.4.11",
     "vite-tsconfig-paths": "4.2.1"
   }
 }
